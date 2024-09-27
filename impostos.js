@@ -17,7 +17,7 @@ Acima de R$ 4.664,68 = 27,5%
 */
 
 
-var salario = parseFloat(prompt("Digite o valor de seu SALÁRIO BRUTO MENSAL: R$ "));
+var salario = parseFloat(prompt("Digite o salário bruto do FUNCIONÁRIO: R$ "));
 
 var faixaInss = "*** INSS - Instituto Nacional de Seguro Social ***\n";
 faixaInss += "    CÓDIGO |             SALÁRIO          | DECONTO\n"
@@ -25,7 +25,7 @@ faixaInss += "      1 -> | Até R$ 1.302,00              |   7,5%\n";
 faixaInss += "      2 -> | De R$ 1.302,01 a R$ 2.571,29 |     9%\n";
 faixaInss += "      3 -> | De R$ 2.571,30 a R$ 3.856,94 |    12%\n";
 faixaInss += "      4 -> | Acima de R$ 3.856,94         |    14%\n";
-faixaInss += "Digite o CÓDIGO da faixa correspondente ao seu salário bruto: ";
+faixaInss += "Digite o CÓDIGO da faixa correspondente ao salário bruto do FUNCIONÁRIO: ";
 
 var codigoInss = parseInt(prompt(faixaInss));
 
@@ -49,7 +49,7 @@ faixaIrrf += "     2 ->  | De R$ 1.903,99 a R$ 2.826,65  |   7,5%\n";
 faixaIrrf += "     3 ->  | De R$ 2.826,66 a R$ 3.751,05  |    15%\n";
 faixaIrrf += "     4 ->  | De R$ 3.751,06 a R$ 4.664,68  |  22,5%\n";
 faixaIrrf += "     5 ->  | Acima de R$ 4.664,68          |  27,5%\n";
-faixaIrrf += "Digite o CÓDIGO da faixa correspondente ao seu salário bruto: ";
+faixaIrrf += "Digite o CÓDIGO da faixa correspondente ao salário bruto do FUNCIONÁRIO: ";
 
 var codigoIrrf = parseInt(prompt(faixaIrrf));
 
@@ -69,6 +69,8 @@ if (codigoIrrf == 1){
 }
 var totalDescontos = (salario - descontoInss + descontoIrrf);
 
-console.log ("Seu SALÁRIO BRUTO se enquadra na FAIXA " + codigoInss + " e o DESCONTO é de: R$ " + descontoInss);
-console.log ("Seu SALÁRIO BRUTO se enquadra na FAIXA " + codigoIrrf + " e o DESCONTO é de: R$ " + descontoIrrf);
-console.log ("Seu SALÁRIO LÍQUIDO é de R$ " + totalDescontos);
+console.log ("O SALÁRIO BRUTO se enquadra na FAIXA " + codigoInss + " do INSS e o DESCONTO é de: R$ " + descontoInss);
+console.log ("O SALÁRIO BRUTO se enquadra na FAIXA " + codigoIrrf + " do IRRF e o DESCONTO é de: R$ " + descontoIrrf);
+console.log ("O SALÁRIO LÍQUIDO é de R$ " + totalDescontos);
+
+
