@@ -21,7 +21,7 @@ Débito - 3% de desconto.
 Crédito - sem desconto.
 Apresente todos os dados da compras, com seus calculos e valores;
 */
-/*
+
 var menu = "=*=*=*= MENU LANCHES =*=*=*=\n";
 menu += "CÓDIGO |  LANCHE   |  PREÇO\n";
 menu += "   1   | X-SALADA  | R$ 20,00\n";
@@ -75,8 +75,6 @@ carta += "  1    | Refrigerante Lata | R$ 5,00\n";
 carta += "  2    | Refrigerante 2L   | R$ 10,00\n";
 carta += "  3    | Água              | R$ 3,50\n";
 carta += "  4    | Suco              | R$ 7,50\n";
-carta += "  5    | Heineken          | R$ 18,00\n";
-carta += "  6    | Heineken long     | R$ 12,50\n";
 carta += "Digite o CÓDIGO da bebida:";
 
 var codigoBebida = parseInt(prompt(carta));
@@ -87,8 +85,6 @@ var bebida1 = "REFRIGERANTE LATA";
 var bebida2 = "REFRIGERANTE 2 LITROS";
 var bebida3 = "ÁGUA";
 var bebida4 = "SUCO";
-var bebida5 = "HEINEKEN";
-var bebida6 = "HEINEKEN LONG";
 
 if (codigoBebida == 1) {
     valorBebidas = qtdeBebida * 5;
@@ -134,6 +130,8 @@ var pagamento = parseFloat(prompt(opcao));
 var valorCompras = valorLanches + valorBebidas;
 var valorDesconto;
 
+var total = (valorCompras - valorDesconto);
+
 var formaPag1 = "PIX";
 var formaPag2 = "DINHEIRO";
 var formaPag3 = "DÉBITO";
@@ -168,12 +166,13 @@ if (pagamento == 1) {
     console.log("Compra CANCELADA!!!");
     console.log("Digite uma forma de pagamento VÁLIDA!!!");
 }
-var total = valorCompras - valorDesconto;
+//var total = valorCompras - valorDesconto;
 
 console.log ("*=*=*=* AGRADECEMOS PELA PREFERÊNCIA *=*=*=*")
 console.log ("=*=*=*= VOLTE SEMPRE =*=*=*=");
-*/
 
+
+/*
 var menu = "=*=*=*= MENU LANCHES =*=*=*=\n";
 menu += "CÓDIGO |  LANCHE   |  PREÇO\n";
 menu += "   1   | X-SALADA  | R$ 20,00\n";
@@ -286,3 +285,4 @@ if (total > 0) {
 
 console.log("*=*=*=* AGRADECEMOS PELA PREFERÊNCIA *=*=*=*");
 console.log("=*=*=*= VOLTE SEMPRE =*=*=*=");
+*/
